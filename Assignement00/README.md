@@ -50,7 +50,7 @@ We can compile the kernel:
 WARNING: Before compiling, assure you have at least 20Gb free on your disk
 
 ```
-make
+make -j8
 ```
 
 If during compiling process you encounter a signature error, you can comment 
@@ -68,4 +68,9 @@ Then:
 make modules
 make modules_install
 make install
+reboot
 ```
+
+Congrats ! You have booted on your new kernel !
+
+You can now copy your .config file and /var/log/kern.log file
