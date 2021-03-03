@@ -1,0 +1,12 @@
+--- linux-5.12-rc1/Makefile	2021-03-01 01:05:19.000000000 +0100
++++ exo/Makefile	2021-03-03 11:37:27.489217556 +0100
+@@ -2,7 +2,7 @@
+ VERSION = 5
+ PATCHLEVEL = 12
+ SUBLEVEL = 0
+-EXTRAVERSION = -rc1
++EXTRAVERSION = -thor_kernel
+ NAME = Frozen Wasteland
+ 
+ # *DOCUMENTATION*
+ # Changed EXTRAVERSION from -rc1 to -thor_kernel to be compliant to the subject
