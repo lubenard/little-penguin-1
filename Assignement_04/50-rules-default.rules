@@ -1,0 +1,4 @@
+## Rules to connect to the system
+BUS=="usb", SUBSYSTEM=="input", ACTION="add", RUN+="/root/exo/insert_mod.sh"
+BUS=="usb", SUBSYSTEM=="input", ACTION="remove", RUN+="/root/exo/rm_mod.sh"
+
