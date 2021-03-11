@@ -1,0 +1,3 @@
+# Rules to connect to the system
+
+SUBSYSTEMS=="usb", SUBSYSTEM=="input", ENV{ID_INPUT_KEYBOARD}=="1", ACTION=="add", RUN+="/usr/bin/insmod /home/luca/work/exo/main.ko"

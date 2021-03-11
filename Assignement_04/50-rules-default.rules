@@ -1,3 +1,0 @@
-## Rules to connect to the system
-SUBSYSTEMS=="input", ENV{ID_INPUT_KEYBOARD}=="1", ENV{ID_BUS}=="usb", ACTION=="add", RUN+="/root/exo/insert_mod.sh"
-SUBSYSTEMS=="input", ENV{ID_INPUT_KEYBOARD}=="1", ENV{ID_BUS}=="usb",  ACTION=="remove", RUN+="/root/exo/rm_mod.sh"
