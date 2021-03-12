@@ -2,6 +2,7 @@
 #include <linux/kernel.h>
 #include <linux/miscdevice.h>
 #include <linux/fs.h>
+#include <linux/uaccess.h>
 
 MODULE_LICENSE("GPL");
 
@@ -15,15 +16,30 @@ struct file_operations my_fops = {
 
 struct miscdevice my_misc_driver= {
 	.minor = MISC_DYNAMIC_MINOR,
-	.name = "My misc driver",
+	.name = "fortytwo",
 	.fops = &my_fops,
 };
 
 ssize_t device_read(struct file *file, char *user, size_t size, loff_t *lofft) {
-	return (0);
+	// We are forced to use a array, or it might cause buffer overflow.
+	static char character[8] = "lubenard";
+	static int chars_remaining = 8;
+	int ret;
+
+	printk(KERN_INFO "Number of bytes to copy %ld, size of user = %ld", copy_to_user(user, character, 8), strlen(user));
+	ret = copy_to_user(user, character, 8);
+	if (ret)
+		return (-EFAULT);
+	printk(KERN_INFO "After copy, user is %s with a size of %ld", user, strlen(user));
+	return (chars_remaining--);
 }
 
 ssize_t device_write(struct file *file, const char *user, size_t size, loff_t *lofft) {
+	printk(KERN_INFO "Try to write to the file, user = '%s'", user);
+	if (strncmp(user, "lubenard", size) != 0) {
+		printk(KERN_INFO "strcmp returns %d", strcmp(user, "lubenard"));
+		return (-EINVAL);
+	}
 	return (0);
 }
 
