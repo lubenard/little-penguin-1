@@ -23,15 +23,26 @@ struct miscdevice my_misc_driver= {
 ssize_t device_read(struct file *file, char *user, size_t size, loff_t *lofft) {
 	// We are forced to use a array, or it might cause buffer overflow.
 	static char character[8] = "lubenard";
-	static int chars_remaining = 8;
+	static int chars_remaining = 1;
 	int ret;
 
-	printk(KERN_INFO "Number of bytes to copy %ld, size of user = %ld", copy_to_user(user, character, 8), strlen(user));
+	//
 	ret = copy_to_user(user, character, 8);
 	if (ret)
 		return (-EFAULT);
-	printk(KERN_INFO "After copy, user is %s with a size of %ld", user, strlen(user));
-	return (chars_remaining--);
+	/*
+	 * This sound like weird code, but prevent infinite loop printing of lubenard
+	 * Returning size of string print the characters, then return 0 saying there is no more to
+	 * read.
+	 * Line 43 is a reset for next time we want to read the file
+	 */
+	if (chars_remaining) {
+		chars_remaining = 0;
+		return (8);
+	} else {
+		chars_remaining = 1;
+		return (0);
+	}
 }
 
 ssize_t device_write(struct file *file, const char *user, size_t size, loff_t *lofft) {
@@ -40,7 +51,8 @@ ssize_t device_write(struct file *file, const char *user, size_t size, loff_t *l
 		printk(KERN_INFO "strcmp returns %d", strcmp(user, "lubenard"));
 		return (-EINVAL);
 	}
-	return (0);
+	printk(KERN_INFO "The user input is good, copying it into kernel");
+	return (size);
 }
 
 int init_module(void)
