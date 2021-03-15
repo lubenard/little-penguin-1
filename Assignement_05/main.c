@@ -47,10 +47,8 @@ ssize_t device_read(struct file *file, char *user, size_t size, loff_t *lofft) {
 
 ssize_t device_write(struct file *file, const char *user, size_t size, loff_t *lofft) {
 	printk(KERN_INFO "Try to write to the file, user = '%s'", user);
-	if (strncmp(user, "lubenard", size) != 0) {
-		printk(KERN_INFO "strcmp returns %d", strcmp(user, "lubenard"));
+	if (strncmp(user, "lubenard", size) != 0)
 		return (-EINVAL);
-	}
 	printk(KERN_INFO "The user input is good, copying it into kernel");
 	return (size);
 }
@@ -64,7 +62,6 @@ int init_module(void)
 		printk(KERN_INFO "Error while registering misc char device");
 		return retval;
 	}
-	printk(KERN_INFO "I got number %d for minor number", my_misc_driver.minor);
 	return (0);
 }
 
