@@ -1,0 +1,495 @@
+Mar 15 11:49:04 debian kernel: [    0.000000] Linux version 5.12.0-rc3-next-20210315 (root@debian) (gcc (Debian 8.3.0-6) 8.3.0, GNU ld (GNU Binutils for Debian) 2.31.1) #1 SMP Mon Mar 15 08:06:41 EDT 2021
+Mar 15 11:49:04 debian kernel: [    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-5.12.0-rc3-next-20210315 root=UUID=4f83b2b1-87d6-44a8-bd5a-50a111f8eafb ro quiet
+Mar 15 11:49:04 debian kernel: [    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+Mar 15 11:49:04 debian kernel: [    0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+Mar 15 11:49:04 debian kernel: [    0.000000] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+Mar 15 11:49:04 debian kernel: [    0.000000] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+Mar 15 11:49:04 debian kernel: [    0.000000] x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'standard' format.
+Mar 15 11:49:04 debian kernel: [    0.000000] BIOS-provided physical RAM map:
+Mar 15 11:49:04 debian kernel: [    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+Mar 15 11:49:04 debian kernel: [    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+Mar 15 11:49:04 debian kernel: [    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+Mar 15 11:49:04 debian kernel: [    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000dffeffff] usable
+Mar 15 11:49:04 debian kernel: [    0.000000] BIOS-e820: [mem 0x00000000dfff0000-0x00000000dfffffff] ACPI data
+Mar 15 11:49:04 debian kernel: [    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+Mar 15 11:49:04 debian kernel: [    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+Mar 15 11:49:04 debian kernel: [    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+Mar 15 11:49:04 debian kernel: [    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000011fffffff] usable
+Mar 15 11:49:04 debian kernel: [    0.000000] NX (Execute Disable) protection: active
+Mar 15 11:49:04 debian kernel: [    0.000000] SMBIOS 2.5 present.
+Mar 15 11:49:04 debian kernel: [    0.000000] DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+Mar 15 11:49:04 debian kernel: [    0.000000] Hypervisor detected: KVM
+Mar 15 11:49:04 debian kernel: [    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
+Mar 15 11:49:04 debian kernel: [    0.000000] kvm-clock: cpu 0, msr d6309001, primary cpu clock
+Mar 15 11:49:04 debian kernel: [    0.000002] kvm-clock: using sched offset of 62183301967 cycles
+Mar 15 11:49:04 debian kernel: [    0.000004] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+Mar 15 11:49:04 debian kernel: [    0.000006] tsc: Detected 2893.406 MHz processor
+Mar 15 11:49:04 debian kernel: [    0.001296] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+Mar 15 11:49:04 debian kernel: [    0.001300] e820: remove [mem 0x000a0000-0x000fffff] usable
+Mar 15 11:49:04 debian kernel: [    0.001304] last_pfn = 0x120000 max_arch_pfn = 0x400000000
+Mar 15 11:49:04 debian kernel: [    0.001314] Disabled
+Mar 15 11:49:04 debian kernel: [    0.001315] x86/PAT: MTRRs disabled, skipping PAT initialization too.
+Mar 15 11:49:04 debian kernel: [    0.001318] CPU MTRRs all blank - virtualized system.
+Mar 15 11:49:04 debian kernel: [    0.001321] x86/PAT: Configuration [0-7]: WB  WT  UC- UC  WB  WT  UC- UC  
+Mar 15 11:49:04 debian kernel: [    0.001322] last_pfn = 0xdfff0 max_arch_pfn = 0x400000000
+Mar 15 11:49:04 debian kernel: [    0.001396] found SMP MP-table at [mem 0x0009fff0-0x0009ffff]
+Mar 15 11:49:04 debian kernel: [    0.223817] RAMDISK: [mem 0x044ff000-0x1e276fff]
+Mar 15 11:49:04 debian kernel: [    0.223830] ACPI: Early table checksum verification disabled
+Mar 15 11:49:04 debian kernel: [    0.223835] ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+Mar 15 11:49:04 debian kernel: [    0.223840] ACPI: XSDT 0x00000000DFFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+Mar 15 11:49:04 debian kernel: [    0.223846] ACPI: FACP 0x00000000DFFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+Mar 15 11:49:04 debian kernel: [    0.223853] ACPI: DSDT 0x00000000DFFF0470 002325 (v02 VBOX   VBOXBIOS 00000002 INTL 20120111)
+Mar 15 11:49:04 debian kernel: [    0.223857] ACPI: FACS 0x00000000DFFF0200 000040
+Mar 15 11:49:04 debian kernel: [    0.223860] ACPI: FACS 0x00000000DFFF0200 000040
+Mar 15 11:49:04 debian kernel: [    0.223863] ACPI: APIC 0x00000000DFFF0240 00005C (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+Mar 15 11:49:04 debian kernel: [    0.223867] ACPI: SSDT 0x00000000DFFF02A0 0001CC (v01 VBOX   VBOXCPUT 00000002 INTL 20120111)
+Mar 15 11:49:04 debian kernel: [    0.223876] ACPI: Local APIC address 0xfee00000
+Mar 15 11:49:04 debian kernel: [    0.224221] No NUMA configuration found
+Mar 15 11:49:04 debian kernel: [    0.224222] Faking a node at [mem 0x0000000000000000-0x000000011fffffff]
+Mar 15 11:49:04 debian kernel: [    0.224226] NODE_DATA(0) allocated [mem 0x11fff7000-0x11fffbfff]
+Mar 15 11:49:04 debian kernel: [    0.224245] Zone ranges:
+Mar 15 11:49:04 debian kernel: [    0.224246]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+Mar 15 11:49:04 debian kernel: [    0.224248]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+Mar 15 11:49:04 debian kernel: [    0.224249]   Normal   [mem 0x0000000100000000-0x000000011fffffff]
+Mar 15 11:49:04 debian kernel: [    0.224250]   Device   empty
+Mar 15 11:49:04 debian kernel: [    0.224251] Movable zone start for each node
+Mar 15 11:49:04 debian kernel: [    0.224252] Early memory node ranges
+Mar 15 11:49:04 debian kernel: [    0.224252]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+Mar 15 11:49:04 debian kernel: [    0.224254]   node   0: [mem 0x0000000000100000-0x00000000dffeffff]
+Mar 15 11:49:04 debian kernel: [    0.224255]   node   0: [mem 0x0000000100000000-0x000000011fffffff]
+Mar 15 11:49:04 debian kernel: [    0.224256] Initmem setup node 0 [mem 0x0000000000001000-0x000000011fffffff]
+Mar 15 11:49:04 debian kernel: [    0.224258] On node 0 totalpages: 1048462
+Mar 15 11:49:04 debian kernel: [    0.224259]   DMA zone: 64 pages used for memmap
+Mar 15 11:49:04 debian kernel: [    0.224260]   DMA zone: 21 pages reserved
+Mar 15 11:49:04 debian kernel: [    0.224260]   DMA zone: 3998 pages, LIFO batch:0
+Mar 15 11:49:04 debian kernel: [    0.224811]   DMA zone: 28770 pages in unavailable ranges
+Mar 15 11:49:04 debian kernel: [    0.224812]   DMA32 zone: 14272 pages used for memmap
+Mar 15 11:49:04 debian kernel: [    0.224813]   DMA32 zone: 913392 pages, LIFO batch:63
+Mar 15 11:49:04 debian kernel: [    0.237157]   DMA32 zone: 16 pages in unavailable ranges
+Mar 15 11:49:04 debian kernel: [    0.237163]   Normal zone: 2048 pages used for memmap
+Mar 15 11:49:04 debian kernel: [    0.237164]   Normal zone: 131072 pages, LIFO batch:31
+Mar 15 11:49:04 debian kernel: [    0.239850] ACPI: PM-Timer IO Port: 0x4008
+Mar 15 11:49:04 debian kernel: [    0.239857] ACPI: Local APIC address 0xfee00000
+Mar 15 11:49:04 debian kernel: [    0.239920] IOAPIC[0]: apic_id 2, version 32, address 0xfec00000, GSI 0-23
+Mar 15 11:49:04 debian kernel: [    0.239924] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+Mar 15 11:49:04 debian kernel: [    0.239926] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+Mar 15 11:49:04 debian kernel: [    0.239929] ACPI: IRQ0 used by override.
+Mar 15 11:49:04 debian kernel: [    0.239930] ACPI: IRQ9 used by override.
+Mar 15 11:49:04 debian kernel: [    0.239932] Using ACPI (MADT) for SMP configuration information
+Mar 15 11:49:04 debian kernel: [    0.239939] smpboot: Allowing 2 CPUs, 0 hotplug CPUs
+Mar 15 11:49:04 debian kernel: [    0.239963] PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+Mar 15 11:49:04 debian kernel: [    0.239965] PM: hibernation: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+Mar 15 11:49:04 debian kernel: [    0.239966] PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000effff]
+Mar 15 11:49:04 debian kernel: [    0.239966] PM: hibernation: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+Mar 15 11:49:04 debian kernel: [    0.239967] PM: hibernation: Registered nosave memory: [mem 0xdfff0000-0xdfffffff]
+Mar 15 11:49:04 debian kernel: [    0.239968] PM: hibernation: Registered nosave memory: [mem 0xe0000000-0xfebfffff]
+Mar 15 11:49:04 debian kernel: [    0.239969] PM: hibernation: Registered nosave memory: [mem 0xfec00000-0xfec00fff]
+Mar 15 11:49:04 debian kernel: [    0.239970] PM: hibernation: Registered nosave memory: [mem 0xfec01000-0xfedfffff]
+Mar 15 11:49:04 debian kernel: [    0.239970] PM: hibernation: Registered nosave memory: [mem 0xfee00000-0xfee00fff]
+Mar 15 11:49:04 debian kernel: [    0.239971] PM: hibernation: Registered nosave memory: [mem 0xfee01000-0xfffbffff]
+Mar 15 11:49:04 debian kernel: [    0.239972] PM: hibernation: Registered nosave memory: [mem 0xfffc0000-0xffffffff]
+Mar 15 11:49:04 debian kernel: [    0.239973] [mem 0xe0000000-0xfebfffff] available for PCI devices
+Mar 15 11:49:04 debian kernel: [    0.239974] Booting paravirtualized kernel on KVM
+Mar 15 11:49:04 debian kernel: [    0.239977] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+Mar 15 11:49:04 debian kernel: [    0.243700] setup_percpu: NR_CPUS:512 nr_cpumask_bits:512 nr_cpu_ids:2 nr_node_ids:1
+Mar 15 11:49:04 debian kernel: [    0.244165] percpu: Embedded 55 pages/cpu s185688 r8192 d31400 u1048576
+Mar 15 11:49:04 debian kernel: [    0.244171] pcpu-alloc: s185688 r8192 d31400 u1048576 alloc=1*2097152
+Mar 15 11:49:04 debian kernel: [    0.244173] pcpu-alloc: [0] 0 1 
+Mar 15 11:49:04 debian kernel: [    0.244194] kvm-guest: PV spinlocks enabled
+Mar 15 11:49:04 debian kernel: [    0.244196] PV qspinlock hash table entries: 256 (order: 0, 4096 bytes, linear)
+Mar 15 11:49:04 debian kernel: [    0.244205] Built 1 zonelists, mobility grouping on.  Total pages: 1032057
+Mar 15 11:49:04 debian kernel: [    0.244207] Policy zone: Normal
+Mar 15 11:49:04 debian kernel: [    0.244208] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-5.12.0-rc3-next-20210315 root=UUID=4f83b2b1-87d6-44a8-bd5a-50a111f8eafb ro quiet
+Mar 15 11:49:04 debian kernel: [    0.245068] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+Mar 15 11:49:04 debian kernel: [    0.245559] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+Mar 15 11:49:04 debian kernel: [    0.245620] mem auto-init: stack:off, heap alloc:off, heap free:off
+Mar 15 11:49:04 debian kernel: [    0.262451] Memory: 3605032K/4193848K available (12295K kernel code, 1790K rwdata, 3956K rodata, 1728K init, 1124K bss, 588556K reserved, 0K cma-reserved)
+Mar 15 11:49:04 debian kernel: [    0.262460] random: get_random_u64 called from __kmem_cache_create+0x2a/0x410 with crng_init=0
+Mar 15 11:49:04 debian kernel: [    0.262551] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+Mar 15 11:49:04 debian kernel: [    0.262560] Kernel/User page tables isolation: enabled
+Mar 15 11:49:04 debian kernel: [    0.262580] ftrace: allocating 36528 entries in 143 pages
+Mar 15 11:49:04 debian kernel: [    0.272018] ftrace: allocated 143 pages with 5 groups
+Mar 15 11:49:04 debian kernel: [    0.272460] rcu: Hierarchical RCU implementation.
+Mar 15 11:49:04 debian kernel: [    0.272461] rcu: 	RCU restricting CPUs from NR_CPUS=512 to nr_cpu_ids=2.
+Mar 15 11:49:04 debian kernel: [    0.272462] 	Rude variant of Tasks RCU enabled.
+Mar 15 11:49:04 debian kernel: [    0.272463] 	Tracing variant of Tasks RCU enabled.
+Mar 15 11:49:04 debian kernel: [    0.272463] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+Mar 15 11:49:04 debian kernel: [    0.272464] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=2
+Mar 15 11:49:04 debian kernel: [    0.275570] NR_IRQS: 33024, nr_irqs: 440, preallocated irqs: 16
+Mar 15 11:49:04 debian kernel: [    0.275926] random: crng done (trusting CPU's manufacturer)
+Mar 15 11:49:04 debian kernel: [    0.283899] Console: colour VGA+ 80x25
+Mar 15 11:49:04 debian kernel: [    0.283908] printk: console [tty0] enabled
+Mar 15 11:49:04 debian kernel: [    0.283923] ACPI: Core revision 20210105
+Mar 15 11:49:04 debian kernel: [    0.284031] APIC: Switch to symmetric I/O mode setup
+Mar 15 11:49:04 debian kernel: [    0.285059] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+Mar 15 11:49:04 debian kernel: [    0.285081] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x29b4ee1aabe, max_idle_ns: 440795265226 ns
+Mar 15 11:49:04 debian kernel: [    0.285087] Calibrating delay loop (skipped) preset value.. 5786.81 BogoMIPS (lpj=11573624)
+Mar 15 11:49:04 debian kernel: [    0.285089] pid_max: default: 32768 minimum: 301
+Mar 15 11:49:04 debian kernel: [    0.285110] LSM: Security Framework initializing
+Mar 15 11:49:04 debian kernel: [    0.285114] Yama: becoming mindful.
+Mar 15 11:49:04 debian kernel: [    0.285131] AppArmor: AppArmor initialized
+Mar 15 11:49:04 debian kernel: [    0.285132] TOMOYO Linux initialized
+Mar 15 11:49:04 debian kernel: [    0.285151] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+Mar 15 11:49:04 debian kernel: [    0.285159] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+Mar 15 11:49:04 debian kernel: [    0.285413] unchecked MSR access error: WRMSR to 0x3a (tried to write 0x0000000000000001) at rIP: 0xffffffff87a613a4 (native_write_msr+0x4/0x20)
+Mar 15 11:49:04 debian kernel: [    0.285420] Call Trace:
+Mar 15 11:49:04 debian kernel: [    0.285422]  init_ia32_feat_ctl+0x85/0x270
+Mar 15 11:49:04 debian kernel: [    0.285427]  init_intel+0xdb/0x410
+Mar 15 11:49:04 debian kernel: [    0.285429]  identify_cpu+0x2d0/0x5a0
+Mar 15 11:49:04 debian kernel: [    0.285432]  identify_boot_cpu+0xc/0x94
+Mar 15 11:49:04 debian kernel: [    0.285435]  check_bugs+0x28/0xa06
+Mar 15 11:49:04 debian kernel: [    0.285437]  ? __get_locked_pte+0x170/0x1f0
+Mar 15 11:49:04 debian kernel: [    0.285440]  start_kernel+0x586/0x5b8
+Mar 15 11:49:04 debian kernel: [    0.285442]  secondary_startup_64_no_verify+0xb0/0xbb
+Mar 15 11:49:04 debian kernel: [    0.285474] Last level iTLB entries: 4KB 512, 2MB 8, 4MB 8
+Mar 15 11:49:04 debian kernel: [    0.285475] Last level dTLB entries: 4KB 512, 2MB 32, 4MB 32, 1GB 0
+Mar 15 11:49:04 debian kernel: [    0.285478] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+Mar 15 11:49:04 debian kernel: [    0.285480] Spectre V2 : Mitigation: Full generic retpoline
+Mar 15 11:49:04 debian kernel: [    0.285480] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+Mar 15 11:49:04 debian kernel: [    0.285481] Speculative Store Bypass: Vulnerable
+Mar 15 11:49:04 debian kernel: [    0.285483] SRBDS: Unknown: Dependent on hypervisor status
+Mar 15 11:49:04 debian kernel: [    0.285484] MDS: Mitigation: Clear CPU buffers
+Mar 15 11:49:04 debian kernel: [    0.286866] Freeing SMP alternatives memory: 32K
+Mar 15 11:49:04 debian kernel: [    0.396319] smpboot: CPU0: Intel(R) Core(TM) i5-3470S CPU @ 2.90GHz (family: 0x6, model: 0x3a, stepping: 0x9)
+Mar 15 11:49:04 debian kernel: [    0.396496] Performance Events: unsupported p6 CPU model 58 no PMU driver, software events only.
+Mar 15 11:49:04 debian kernel: [    0.396530] rcu: Hierarchical SRCU implementation.
+Mar 15 11:49:04 debian kernel: [    0.396846] NMI watchdog: Perf NMI watchdog permanently disabled
+Mar 15 11:49:04 debian kernel: [    0.396884] smp: Bringing up secondary CPUs ...
+Mar 15 11:49:04 debian kernel: [    0.396958] x86: Booting SMP configuration:
+Mar 15 11:49:04 debian kernel: [    0.396960] .... node  #0, CPUs:      #1
+Mar 15 11:49:04 debian kernel: [    0.013187] kvm-clock: cpu 1, msr d6309041, secondary cpu clock
+Mar 15 11:49:04 debian kernel: [    0.397085] smp: Brought up 1 node, 2 CPUs
+Mar 15 11:49:04 debian kernel: [    0.397085] smpboot: Max logical packages: 1
+Mar 15 11:49:04 debian kernel: [    0.397085] smpboot: Total of 2 processors activated (11573.62 BogoMIPS)
+Mar 15 11:49:04 debian kernel: [    0.397273] devtmpfs: initialized
+Mar 15 11:49:04 debian kernel: [    0.397273] x86/mm: Memory block size: 128MB
+Mar 15 11:49:04 debian kernel: [    0.397522] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+Mar 15 11:49:04 debian kernel: [    0.397522] futex hash table entries: 512 (order: 3, 32768 bytes, linear)
+Mar 15 11:49:04 debian kernel: [    0.397522] pinctrl core: initialized pinctrl subsystem
+Mar 15 11:49:04 debian kernel: [    0.397522] NET: Registered protocol family 16
+Mar 15 11:49:04 debian kernel: [    0.397522] audit: initializing netlink subsys (disabled)
+Mar 15 11:49:04 debian kernel: [    0.397536] audit: type=2000 audit(1615823394.566:1): state=initialized audit_enabled=0 res=1
+Mar 15 11:49:04 debian kernel: [    0.397536] thermal_sys: Registered thermal governor 'fair_share'
+Mar 15 11:49:04 debian kernel: [    0.397536] thermal_sys: Registered thermal governor 'bang_bang'
+Mar 15 11:49:04 debian kernel: [    0.397536] thermal_sys: Registered thermal governor 'step_wise'
+Mar 15 11:49:04 debian kernel: [    0.397536] thermal_sys: Registered thermal governor 'user_space'
+Mar 15 11:49:04 debian kernel: [    0.397536] cpuidle: using governor ladder
+Mar 15 11:49:04 debian kernel: [    0.397536] cpuidle: using governor menu
+Mar 15 11:49:04 debian kernel: [    0.397536] ACPI: bus type PCI registered
+Mar 15 11:49:04 debian kernel: [    0.397536] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+Mar 15 11:49:04 debian kernel: [    0.397536] PCI: Using configuration type 1 for base access
+Mar 15 11:49:04 debian kernel: [    0.398070] Kprobes globally optimized
+Mar 15 11:49:04 debian kernel: [    0.398103] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+Mar 15 11:49:04 debian kernel: [    0.525626] ACPI: Added _OSI(Module Device)
+Mar 15 11:49:04 debian kernel: [    0.525626] ACPI: Added _OSI(Processor Device)
+Mar 15 11:49:04 debian kernel: [    0.525626] ACPI: Added _OSI(3.0 _SCP Extensions)
+Mar 15 11:49:04 debian kernel: [    0.525626] ACPI: Added _OSI(Processor Aggregator Device)
+Mar 15 11:49:04 debian kernel: [    0.525626] ACPI: Added _OSI(Linux-Dell-Video)
+Mar 15 11:49:04 debian kernel: [    0.525626] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+Mar 15 11:49:04 debian kernel: [    0.525626] ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+Mar 15 11:49:04 debian kernel: [    0.529494] ACPI: 2 ACPI AML tables successfully acquired and loaded
+Mar 15 11:49:04 debian kernel: [    0.531021] ACPI: Interpreter enabled
+Mar 15 11:49:04 debian kernel: [    0.531030] ACPI: (supports S0 S5)
+Mar 15 11:49:04 debian kernel: [    0.531032] ACPI: Using IOAPIC for interrupt routing
+Mar 15 11:49:04 debian kernel: [    0.531167] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+Mar 15 11:49:04 debian kernel: [    0.531305] ACPI: Enabled 2 GPEs in block 00 to 07
+Mar 15 11:49:04 debian kernel: [    0.536196] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+Mar 15 11:49:04 debian kernel: [    0.536202] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI HPX-Type3]
+Mar 15 11:49:04 debian kernel: [    0.536459] acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+Mar 15 11:49:04 debian kernel: [    0.536465] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+Mar 15 11:49:04 debian kernel: [    0.537085] PCI host bridge to bus 0000:00
+Mar 15 11:49:04 debian kernel: [    0.537085] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+Mar 15 11:49:04 debian kernel: [    0.537085] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+Mar 15 11:49:04 debian kernel: [    0.537085] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+Mar 15 11:49:04 debian kernel: [    0.537085] pci_bus 0000:00: root bus resource [mem 0xe0000000-0xfdffffff window]
+Mar 15 11:49:04 debian kernel: [    0.537085] pci_bus 0000:00: root bus resource [bus 00-ff]
+Mar 15 11:49:04 debian kernel: [    0.537151] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+Mar 15 11:49:04 debian kernel: [    0.538422] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+Mar 15 11:49:04 debian kernel: [    0.540090] pci 0000:00:02.0: [15ad:0405] type 00 class 0x030000
+Mar 15 11:49:04 debian kernel: [    0.541830] pci 0000:00:02.0: reg 0x10: [io  0xd000-0xd00f]
+Mar 15 11:49:04 debian kernel: [    0.545866] pci 0000:00:02.0: reg 0x14: [mem 0xe0000000-0xe3ffffff pref]
+Mar 15 11:49:04 debian kernel: [    0.549123] pci 0000:00:02.0: reg 0x18: [mem 0xf0000000-0xf01fffff]
+Mar 15 11:49:04 debian kernel: [    0.560443] pci 0000:00:03.0: [8086:100e] type 00 class 0x020000
+Mar 15 11:49:04 debian kernel: [    0.561252] pci 0000:00:03.0: reg 0x10: [mem 0xf0200000-0xf021ffff]
+Mar 15 11:49:04 debian kernel: [    0.567469] pci 0000:00:03.0: reg 0x18: [io  0xd010-0xd017]
+Mar 15 11:49:04 debian kernel: [    0.577993] pci 0000:00:04.0: [80ee:cafe] type 00 class 0x088000
+Mar 15 11:49:04 debian kernel: [    0.580034] pci 0000:00:04.0: reg 0x10: [io  0xd020-0xd03f]
+Mar 15 11:49:04 debian kernel: [    0.581266] pci 0000:00:04.0: reg 0x14: [mem 0xf0400000-0xf07fffff]
+Mar 15 11:49:04 debian kernel: [    0.583534] pci 0000:00:04.0: reg 0x18: [mem 0xf0800000-0xf0803fff pref]
+Mar 15 11:49:04 debian kernel: [    0.593878] pci 0000:00:05.0: [8086:2668] type 00 class 0x040300
+Mar 15 11:49:04 debian kernel: [    0.595958] pci 0000:00:05.0: reg 0x10: [mem 0xf0804000-0xf0807fff]
+Mar 15 11:49:04 debian kernel: [    0.609732] pci 0000:00:06.0: [106b:003f] type 00 class 0x0c0310
+Mar 15 11:49:04 debian kernel: [    0.611770] pci 0000:00:06.0: reg 0x10: [mem 0xf0808000-0xf0808fff]
+Mar 15 11:49:04 debian kernel: [    0.623953] pci 0000:00:07.0: [8086:7113] type 00 class 0x068000
+Mar 15 11:49:04 debian kernel: [    0.625805] pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+Mar 15 11:49:04 debian kernel: [    0.625828] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+Mar 15 11:49:04 debian kernel: [    0.626449] pci 0000:00:0b.0: [8086:265c] type 00 class 0x0c0320
+Mar 15 11:49:04 debian kernel: [    0.628501] pci 0000:00:0b.0: reg 0x10: [mem 0xf0809000-0xf0809fff]
+Mar 15 11:49:04 debian kernel: [    0.641671] pci 0000:00:0d.0: [8086:2829] type 00 class 0x010601
+Mar 15 11:49:04 debian kernel: [    0.643734] pci 0000:00:0d.0: reg 0x10: [io  0xd040-0xd047]
+Mar 15 11:49:04 debian kernel: [    0.645249] pci 0000:00:0d.0: reg 0x14: [io  0xd048-0xd04b]
+Mar 15 11:49:04 debian kernel: [    0.647199] pci 0000:00:0d.0: reg 0x18: [io  0xd050-0xd057]
+Mar 15 11:49:04 debian kernel: [    0.649169] pci 0000:00:0d.0: reg 0x1c: [io  0xd058-0xd05b]
+Mar 15 11:49:04 debian kernel: [    0.651099] pci 0000:00:0d.0: reg 0x20: [io  0xd060-0xd06f]
+Mar 15 11:49:04 debian kernel: [    0.653172] pci 0000:00:0d.0: reg 0x24: [mem 0xf080a000-0xf080bfff]
+Mar 15 11:49:04 debian kernel: [    0.658081] ACPI: PCI: Interrupt link LNKA configured for IRQ 11
+Mar 15 11:49:04 debian kernel: [    0.658315] ACPI: PCI: Interrupt link LNKB configured for IRQ 10
+Mar 15 11:49:04 debian kernel: [    0.658438] ACPI: PCI: Interrupt link LNKC configured for IRQ 9
+Mar 15 11:49:04 debian kernel: [    0.658559] ACPI: PCI: Interrupt link LNKD configured for IRQ 11
+Mar 15 11:49:04 debian kernel: [    0.658757] iommu: Default domain type: Translated 
+Mar 15 11:49:04 debian kernel: [    0.658804] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+Mar 15 11:49:04 debian kernel: [    0.658804] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+Mar 15 11:49:04 debian kernel: [    0.658804] pci 0000:00:02.0: vgaarb: bridge control possible
+Mar 15 11:49:04 debian kernel: [    0.658804] vgaarb: loaded
+Mar 15 11:49:04 debian kernel: [    0.658804] pps_core: LinuxPPS API ver. 1 registered
+Mar 15 11:49:04 debian kernel: [    0.658804] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+Mar 15 11:49:04 debian kernel: [    0.658804] PTP clock support registered
+Mar 15 11:49:04 debian kernel: [    0.658804] EDAC MC: Ver: 3.0.0
+Mar 15 11:49:04 debian kernel: [    0.658804] PCI: Using ACPI for IRQ routing
+Mar 15 11:49:04 debian kernel: [    0.658804] PCI: pci_cache_line_size set to 64 bytes
+Mar 15 11:49:04 debian kernel: [    0.658804] e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
+Mar 15 11:49:04 debian kernel: [    0.658804] e820: reserve RAM buffer [mem 0xdfff0000-0xdfffffff]
+Mar 15 11:49:04 debian kernel: [    0.658804] clocksource: Switched to clocksource kvm-clock
+Mar 15 11:49:04 debian kernel: [    0.669609] VFS: Disk quotas dquot_6.6.0
+Mar 15 11:49:04 debian kernel: [    0.669630] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Mar 15 11:49:04 debian kernel: [    0.669761] AppArmor: AppArmor Filesystem Enabled
+Mar 15 11:49:04 debian kernel: [    0.669783] pnp: PnP ACPI init
+Mar 15 11:49:04 debian kernel: [    0.669869] pnp 00:00: Plug and Play ACPI device, IDs PNP0303 (active)
+Mar 15 11:49:04 debian kernel: [    0.669984] pnp 00:01: Plug and Play ACPI device, IDs PNP0f03 (active)
+Mar 15 11:49:04 debian kernel: [    0.671051] pnp: PnP ACPI: found 2 devices
+Mar 15 11:49:04 debian kernel: [    0.683807] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+Mar 15 11:49:04 debian kernel: [    0.683880] NET: Registered protocol family 2
+Mar 15 11:49:04 debian kernel: [    0.684039] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+Mar 15 11:49:04 debian kernel: [    0.684055] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+Mar 15 11:49:04 debian kernel: [    0.684094] TCP bind hash table entries: 32768 (order: 7, 524288 bytes, linear)
+Mar 15 11:49:04 debian kernel: [    0.684476] TCP: Hash tables configured (established 32768 bind 32768)
+Mar 15 11:49:04 debian kernel: [    0.684594] UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
+Mar 15 11:49:04 debian kernel: [    0.684603] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
+Mar 15 11:49:04 debian kernel: [    0.684641] NET: Registered protocol family 1
+Mar 15 11:49:04 debian kernel: [    0.684654] NET: Registered protocol family 44
+Mar 15 11:49:04 debian kernel: [    0.684663] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+Mar 15 11:49:04 debian kernel: [    0.684665] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+Mar 15 11:49:04 debian kernel: [    0.684667] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+Mar 15 11:49:04 debian kernel: [    0.684668] pci_bus 0000:00: resource 7 [mem 0xe0000000-0xfdffffff window]
+Mar 15 11:49:04 debian kernel: [    0.684764] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+Mar 15 11:49:04 debian kernel: [    0.684788] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+Mar 15 11:49:04 debian kernel: [    0.684868] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+Mar 15 11:49:04 debian kernel: [    0.686969] PCI: CLS 0 bytes, default 64
+Mar 15 11:49:04 debian kernel: [    0.687004] Trying to unpack rootfs image as initramfs...
+Mar 15 11:49:04 debian kernel: [    5.806318] Freeing initrd memory: 423392K
+Mar 15 11:49:04 debian kernel: [    5.806414] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+Mar 15 11:49:04 debian kernel: [    5.806415] software IO TLB: mapped [mem 0x00000000dbff0000-0x00000000dfff0000] (64MB)
+Mar 15 11:49:04 debian kernel: [    5.806447] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x29b4ee1aabe, max_idle_ns: 440795265226 ns
+Mar 15 11:49:04 debian kernel: [    5.806471] clocksource: Switched to clocksource tsc
+Mar 15 11:49:04 debian kernel: [    5.806512] platform rtc_cmos: registered platform RTC device (no PNP device found)
+Mar 15 11:49:04 debian kernel: [    5.806899] Initialise system trusted keyrings
+Mar 15 11:49:04 debian kernel: [    5.806908] Key type blacklist registered
+Mar 15 11:49:04 debian kernel: [    5.807072] workingset: timestamp_bits=40 max_order=20 bucket_order=0
+Mar 15 11:49:04 debian kernel: [    5.807961] zbud: loaded
+Mar 15 11:49:04 debian kernel: [    5.808278] Key type asymmetric registered
+Mar 15 11:49:04 debian kernel: [    5.808280] Asymmetric key parser 'x509' registered
+Mar 15 11:49:04 debian kernel: [    5.808287] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 248)
+Mar 15 11:49:04 debian kernel: [    5.808405] io scheduler mq-deadline registered
+Mar 15 11:49:04 debian kernel: [    5.808685] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+Mar 15 11:49:04 debian kernel: [    5.808940] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+Mar 15 11:49:04 debian kernel: [    5.810074] Linux agpgart interface v0.103
+Mar 15 11:49:04 debian kernel: [    5.810161] AMD-Vi: AMD IOMMUv2 driver by Joerg Roedel <jroedel@suse.de>
+Mar 15 11:49:04 debian kernel: [    5.810162] AMD-Vi: AMD IOMMUv2 functionality not available on this system
+Mar 15 11:49:04 debian kernel: [    5.810386] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+Mar 15 11:49:04 debian kernel: [    5.810810] serio: i8042 KBD port at 0x60,0x64 irq 1
+Mar 15 11:49:04 debian kernel: [    5.810816] serio: i8042 AUX port at 0x60,0x64 irq 12
+Mar 15 11:49:04 debian kernel: [    5.811105] mousedev: PS/2 mouse device common for all mice
+Mar 15 11:49:04 debian kernel: [    5.811716] rtc_cmos rtc_cmos: registered as rtc0
+Mar 15 11:49:04 debian kernel: [    5.811878] rtc_cmos rtc_cmos: setting system clock to 2021-03-15T15:48:57 UTC (1615823337)
+Mar 15 11:49:04 debian kernel: [    5.811907] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+Mar 15 11:49:04 debian kernel: [    5.811916] intel_pstate: CPU model not supported
+Mar 15 11:49:04 debian kernel: [    5.812037] ledtrig-cpu: registered to indicate activity on CPUs
+Mar 15 11:49:04 debian kernel: [    5.812187] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input0
+Mar 15 11:49:04 debian kernel: [    5.812290] NET: Registered protocol family 10
+Mar 15 11:49:04 debian kernel: [    5.820516] Segment Routing with IPv6
+Mar 15 11:49:04 debian kernel: [    5.820534] mip6: Mobile IPv6
+Mar 15 11:49:04 debian kernel: [    5.820536] NET: Registered protocol family 17
+Mar 15 11:49:04 debian kernel: [    5.820647] mpls_gso: MPLS GSO support
+Mar 15 11:49:04 debian kernel: [    5.820811] IPI shorthand broadcast: enabled
+Mar 15 11:49:04 debian kernel: [    5.820820] sched_clock: Marking stable (5811573860, 9187008)->(5826396441, -5635573)
+Mar 15 11:49:04 debian kernel: [    5.820997] registered taskstats version 1
+Mar 15 11:49:04 debian kernel: [    5.821000] Loading compiled-in X.509 certificates
+Mar 15 11:49:04 debian kernel: [    5.821028] zswap: loaded using pool lzo/zbud
+Mar 15 11:49:04 debian kernel: [    5.821354] AppArmor: AppArmor sha1 policy hashing enabled
+Mar 15 11:49:04 debian kernel: [    5.822485] Freeing unused kernel image (initmem) memory: 1728K
+Mar 15 11:49:04 debian kernel: [    5.841375] Write protecting the kernel read-only data: 18432k
+Mar 15 11:49:04 debian kernel: [    5.842014] Freeing unused kernel image (text/rodata gap) memory: 2040K
+Mar 15 11:49:04 debian kernel: [    5.842217] Freeing unused kernel image (rodata/data gap) memory: 140K
+Mar 15 11:49:04 debian kernel: [    5.885510] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+Mar 15 11:49:04 debian kernel: [    5.885513] x86/mm: Checking user space page tables
+Mar 15 11:49:04 debian kernel: [    5.926213] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+Mar 15 11:49:04 debian kernel: [    5.926220] Run /init as init process
+Mar 15 11:49:04 debian kernel: [    5.926221]   with arguments:
+Mar 15 11:49:04 debian kernel: [    5.926222]     /init
+Mar 15 11:49:04 debian kernel: [    5.926223]   with environment:
+Mar 15 11:49:04 debian kernel: [    5.926224]     HOME=/
+Mar 15 11:49:04 debian kernel: [    5.926224]     TERM=linux
+Mar 15 11:49:04 debian kernel: [    5.926225]     BOOT_IMAGE=/boot/vmlinuz-5.12.0-rc3-next-20210315
+Mar 15 11:49:04 debian kernel: [    6.034047] i2c_piix4: module verification failed: signature and/or required key missing - tainting kernel
+Mar 15 11:49:04 debian kernel: [    6.034783] piix4_smbus 0000:00:07.0: SMBus Host Controller at 0x4100, revision 0
+Mar 15 11:49:04 debian kernel: [    6.040444] ACPI: bus type USB registered
+Mar 15 11:49:04 debian kernel: [    6.040472] usbcore: registered new interface driver usbfs
+Mar 15 11:49:04 debian kernel: [    6.040479] usbcore: registered new interface driver hub
+Mar 15 11:49:04 debian kernel: [    6.040489] usbcore: registered new device driver usb
+Mar 15 11:49:04 debian kernel: [    6.049069] e1000: Intel(R) PRO/1000 Network Driver
+Mar 15 11:49:04 debian kernel: [    6.049073] e1000: Copyright (c) 1999-2006 Intel Corporation.
+Mar 15 11:49:04 debian kernel: [    6.052470] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+Mar 15 11:49:04 debian kernel: [    6.054711] ehci-pci: EHCI PCI platform driver
+Mar 15 11:49:04 debian kernel: [    6.055284] ehci-pci 0000:00:0b.0: EHCI Host Controller
+Mar 15 11:49:04 debian kernel: [    6.055291] ehci-pci 0000:00:0b.0: new USB bus registered, assigned bus number 1
+Mar 15 11:49:04 debian kernel: [    6.056044] ehci-pci 0000:00:0b.0: irq 19, io mem 0xf0809000
+Mar 15 11:49:04 debian kernel: [    6.069537] ehci-pci 0000:00:0b.0: USB 2.0 started, EHCI 1.00
+Mar 15 11:49:04 debian kernel: [    6.069587] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.12
+Mar 15 11:49:04 debian kernel: [    6.069590] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Mar 15 11:49:04 debian kernel: [    6.069591] usb usb1: Product: EHCI Host Controller
+Mar 15 11:49:04 debian kernel: [    6.069593] usb usb1: Manufacturer: Linux 5.12.0-rc3-next-20210315 ehci_hcd
+Mar 15 11:49:04 debian kernel: [    6.069594] usb usb1: SerialNumber: 0000:00:0b.0
+Mar 15 11:49:04 debian kernel: [    6.069682] hub 1-0:1.0: USB hub found
+Mar 15 11:49:04 debian kernel: [    6.069688] hub 1-0:1.0: 12 ports detected
+Mar 15 11:49:04 debian kernel: [    6.077593] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+Mar 15 11:49:04 debian kernel: [    6.078443] ohci-pci: OHCI PCI platform driver
+Mar 15 11:49:04 debian kernel: [    6.079149] ohci-pci 0000:00:06.0: OHCI PCI host controller
+Mar 15 11:49:04 debian kernel: [    6.079157] ohci-pci 0000:00:06.0: new USB bus registered, assigned bus number 2
+Mar 15 11:49:04 debian kernel: [    6.079221] ohci-pci 0000:00:06.0: irq 22, io mem 0xf0808000
+Mar 15 11:49:04 debian kernel: [    6.107751] SCSI subsystem initialized
+Mar 15 11:49:04 debian kernel: [    6.116885] libata version 3.00 loaded.
+Mar 15 11:49:04 debian kernel: [    6.119153] ahci 0000:00:0d.0: version 3.0
+Mar 15 11:49:04 debian kernel: [    6.119816] ahci 0000:00:0d.0: SSS flag set, parallel bus scan disabled
+Mar 15 11:49:04 debian kernel: [    6.120042] ahci 0000:00:0d.0: AHCI 0001.0100 32 slots 3 ports 3 Gbps 0x7 impl SATA mode
+Mar 15 11:49:04 debian kernel: [    6.120046] ahci 0000:00:0d.0: flags: 64bit ncq stag only ccc 
+Mar 15 11:49:04 debian kernel: [    6.135725] scsi host0: ahci
+Mar 15 11:49:04 debian kernel: [    6.138623] usb usb2: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.12
+Mar 15 11:49:04 debian kernel: [    6.138627] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Mar 15 11:49:04 debian kernel: [    6.138629] usb usb2: Product: OHCI PCI host controller
+Mar 15 11:49:04 debian kernel: [    6.138631] usb usb2: Manufacturer: Linux 5.12.0-rc3-next-20210315 ohci_hcd
+Mar 15 11:49:04 debian kernel: [    6.138632] usb usb2: SerialNumber: 0000:00:06.0
+Mar 15 11:49:04 debian kernel: [    6.138732] hub 2-0:1.0: USB hub found
+Mar 15 11:49:04 debian kernel: [    6.138752] hub 2-0:1.0: 12 ports detected
+Mar 15 11:49:04 debian kernel: [    6.142984] scsi host1: ahci
+Mar 15 11:49:04 debian kernel: [    6.148621] ACPI: video: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+Mar 15 11:49:04 debian kernel: [    6.148695] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/LNXVIDEO:00/input/input3
+Mar 15 11:49:04 debian kernel: [    6.151613] scsi host2: ahci
+Mar 15 11:49:04 debian kernel: [    6.151677] ata1: SATA max UDMA/133 abar m8192@0xf080a000 port 0xf080a100 irq 21
+Mar 15 11:49:04 debian kernel: [    6.151683] ata2: SATA max UDMA/133 abar m8192@0xf080a000 port 0xf080a180 irq 21
+Mar 15 11:49:04 debian kernel: [    6.151688] ata3: SATA max UDMA/133 abar m8192@0xf080a000 port 0xf080a200 irq 21
+Mar 15 11:49:04 debian kernel: [    6.461556] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+Mar 15 11:49:04 debian kernel: [    6.461716] ata1.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+Mar 15 11:49:04 debian kernel: [    6.461720] ata1.00: 125689856 sectors, multi 128: LBA48 NCQ (depth 32)
+Mar 15 11:49:04 debian kernel: [    6.462013] ata1.00: configured for UDMA/133
+Mar 15 11:49:04 debian kernel: [    6.462124] scsi 0:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+Mar 15 11:49:04 debian kernel: [    6.468053] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input2
+Mar 15 11:49:04 debian kernel: [    6.538442] usb 2-1: new full-speed USB device number 2 using ohci-pci
+Mar 15 11:49:04 debian kernel: [    6.603365] e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 08:00:27:e3:42:97
+Mar 15 11:49:04 debian kernel: [    6.603375] e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
+Mar 15 11:49:04 debian kernel: [    6.605298] e1000 0000:00:03.0 enp0s3: renamed from eth0
+Mar 15 11:49:04 debian kernel: [    6.831881] ata2: SATA link down (SStatus 0 SControl 300)
+Mar 15 11:49:04 debian kernel: [    6.875944] usb 2-1: New USB device found, idVendor=80ee, idProduct=0021, bcdDevice= 1.00
+Mar 15 11:49:04 debian kernel: [    6.875948] usb 2-1: New USB device strings: Mfr=1, Product=3, SerialNumber=0
+Mar 15 11:49:04 debian kernel: [    6.875950] usb 2-1: Product: USB Tablet
+Mar 15 11:49:04 debian kernel: [    6.875951] usb 2-1: Manufacturer: VirtualBox
+Mar 15 11:49:04 debian kernel: [    6.882999] hid: raw HID events driver (C) Jiri Kosina
+Mar 15 11:49:04 debian kernel: [    6.891588] usbcore: registered new interface driver usbhid
+Mar 15 11:49:04 debian kernel: [    6.891593] usbhid: USB HID core driver
+Mar 15 11:49:04 debian kernel: [    6.893942] input: VirtualBox USB Tablet as /devices/pci0000:00/0000:00:06.0/usb2/2-1/2-1:1.0/0003:80EE:0021.0001/input/input4
+Mar 15 11:49:04 debian kernel: [    6.894004] hid-generic 0003:80EE:0021.0001: input,hidraw0: USB HID v1.10 Mouse [VirtualBox USB Tablet] on usb-0000:00:06.0-1/input0
+Mar 15 11:49:04 debian kernel: [    7.200638] ata3: SATA link down (SStatus 0 SControl 300)
+Mar 15 11:49:04 debian kernel: [    7.211027] sd 0:0:0:0: [sda] 125689856 512-byte logical blocks: (64.4 GB/59.9 GiB)
+Mar 15 11:49:04 debian kernel: [    7.211038] sd 0:0:0:0: [sda] Write Protect is off
+Mar 15 11:49:04 debian kernel: [    7.211040] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+Mar 15 11:49:04 debian kernel: [    7.211052] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Mar 15 11:49:04 debian kernel: [    7.237648]  sda: sda1 sda2 < sda5 >
+Mar 15 11:49:04 debian kernel: [    7.253772] sd 0:0:0:0: [sda] Attached SCSI disk
+Mar 15 11:49:04 debian kernel: [    7.407162] process '/usr/bin/fstype' started with executable stack
+Mar 15 11:49:04 debian kernel: [    7.428338] PM: Image not found (code -22)
+Mar 15 11:49:04 debian kernel: [    7.587720] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null). Quota mode: none.
+Mar 15 11:49:04 debian kernel: [    7.861959] Not activating Mandatory Access Control as /sbin/tomoyo-init does not exist.
+Mar 15 11:49:04 debian kernel: [    9.407802] EXT4-fs (sda1): re-mounted. Opts: errors=remount-ro. Quota mode: none.
+Mar 15 11:49:04 debian kernel: [    9.507490] lp: driver loaded but no devices found
+Mar 15 11:49:04 debian kernel: [    9.525617] ppdev: user-space parallel port driver
+Mar 15 11:49:04 debian kernel: [    9.978216] audit: type=1400 audit(1615823341.664:2): apparmor="STATUS" operation="profile_replace" info="not policy admin" error=-13 profile="unconfined" pid=678 comm="apparmor_parser"
+Mar 15 11:49:04 debian kernel: [   10.005203] audit: type=1400 audit(1615823341.688:3): apparmor="STATUS" operation="profile_replace" info="not policy admin" error=-13 profile="unconfined" pid=677 comm="apparmor_parser"
+Mar 15 11:49:04 debian kernel: [   10.057062] audit: type=1400 audit(1615823341.740:4): apparmor="STATUS" operation="profile_replace" info="not policy admin" error=-13 profile="unconfined" pid=678 comm="apparmor_parser"
+Mar 15 11:49:04 debian kernel: [   10.057405] audit: type=1400 audit(1615823341.740:5): apparmor="STATUS" operation="profile_replace" info="not policy admin" error=-13 profile="unconfined" pid=678 comm="apparmor_parser"
+Mar 15 11:49:04 debian kernel: [   10.101912] audit: type=1400 audit(1615823341.788:6): apparmor="STATUS" operation="profile_replace" info="not policy admin" error=-13 profile="unconfined" pid=752 comm="apparmor_parser"
+Mar 15 11:49:04 debian kernel: [   10.149665] audit: type=1400 audit(1615823341.836:7): apparmor="STATUS" operation="profile_replace" info="not policy admin" error=-13 profile="unconfined" pid=677 comm="apparmor_parser"
+Mar 15 11:49:04 debian kernel: [   10.161183] audit: type=1400 audit(1615823341.844:8): apparmor="STATUS" operation="profile_replace" info="not policy admin" error=-13 profile="unconfined" pid=774 comm="apparmor_parser"
+Mar 15 11:49:04 debian kernel: [   10.256958] audit: type=1400 audit(1615823341.940:9): apparmor="STATUS" operation="profile_replace" info="not policy admin" error=-13 profile="unconfined" pid=774 comm="apparmor_parser"
+Mar 15 11:49:04 debian kernel: [   10.420467] audit: type=1400 audit(1615823342.104:10): apparmor="STATUS" operation="profile_replace" info="not policy admin" error=-13 profile="unconfined" pid=752 comm="apparmor_parser"
+Mar 15 11:49:04 debian kernel: [   10.443579] audit: type=1400 audit(1615823342.128:11): apparmor="STATUS" operation="profile_replace" info="not policy admin" error=-13 profile="unconfined" pid=857 comm="apparmor_parser"
+Mar 15 11:49:04 debian kernel: [   10.729958] input: PC Speaker as /devices/platform/pcspkr/input/input5
+Mar 15 11:49:04 debian kernel: [   10.939092] ACPI: AC: AC Adapter [AC] (on-line)
+Mar 15 11:49:04 debian kernel: [   10.942468] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input6
+Mar 15 11:49:04 debian kernel: [   10.961240] ACPI: button: Power Button [PWRF]
+Mar 15 11:49:04 debian kernel: [   10.961450] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input7
+Mar 15 11:49:04 debian kernel: [   10.961474] ACPI: button: Sleep Button [SLPF]
+Mar 15 11:49:04 debian kernel: [   11.053285] vboxguest: host-version: 6.1.18r142142 0x8000000f
+Mar 15 11:49:04 debian kernel: [   11.068165] vbg_heartbeat_init: Setting up heartbeat to trigger every 2000 milliseconds
+Mar 15 11:49:04 debian kernel: [   11.068294] input: VirtualBox mouse integration as /devices/pci0000:00/0000:00:04.0/input/input8
+Mar 15 11:49:04 debian kernel: [   11.092632] vboxguest: misc device minor 125, IRQ 20, I/O port d020, MMIO at 0x00000000f0400000 (size 0x0000000000400000)
+Mar 15 11:49:04 debian kernel: [   11.191944] Error: Driver 'pcspkr' is already registered, aborting...
+Mar 15 11:49:04 debian kernel: [   11.459958] Registered sg device [char major=0x15], version: 4.0.12, date: 20210208
+Mar 15 11:49:04 debian kernel: [   11.461612] sd 0:0:0:0: Attached scsi generic sg0 type 0
+Mar 15 11:49:04 debian kernel: [   11.598466] BUG: Bad rss-counter state mm:00000000c1ce88c8 type:MM_FILEPAGES val:477
+Mar 15 11:49:04 debian kernel: [   11.598917] BUG: Bad rss-counter state mm:00000000c1ce88c8 type:MM_ANONPAGES val:113
+Mar 15 11:49:04 debian kernel: [   11.599493] BUG: non-zero pgtables_bytes on freeing mm: 45056
+Mar 15 11:49:04 debian kernel: [   11.611429] RAPL PMU: API unit is 2^-32 Joules, 0 fixed counters, 10737418240 ms ovfl timer
+Mar 15 11:49:04 debian kernel: [   11.661324] cryptd: max_cpu_qlen set to 1000
+Mar 15 11:49:04 debian kernel: [   11.700440] snd_hda_codec_idt hdaudioC0D0: autoconfig for STAC9221 A1: line_outs=3 (0xc/0xf/0xb/0x0/0x0) type:speaker
+Mar 15 11:49:04 debian kernel: [   11.700448] snd_hda_codec_idt hdaudioC0D0:    speaker_outs=0 (0x0/0x0/0x0/0x0/0x0)
+Mar 15 11:49:04 debian kernel: [   11.700450] snd_hda_codec_idt hdaudioC0D0:    hp_outs=1 (0xa/0x0/0x0/0x0/0x0)
+Mar 15 11:49:04 debian kernel: [   11.700451] snd_hda_codec_idt hdaudioC0D0:    mono: mono_out=0x0
+Mar 15 11:49:04 debian kernel: [   11.700452] snd_hda_codec_idt hdaudioC0D0:    dig-out=0x10/0x0
+Mar 15 11:49:04 debian kernel: [   11.700454] snd_hda_codec_idt hdaudioC0D0:    inputs:
+Mar 15 11:49:04 debian kernel: [   11.700455] snd_hda_codec_idt hdaudioC0D0:      Mic=0xd
+Mar 15 11:49:04 debian kernel: [   11.700456] snd_hda_codec_idt hdaudioC0D0:      Line=0xe
+Mar 15 11:49:04 debian kernel: [   11.700457] snd_hda_codec_idt hdaudioC0D0:      CD=0x15
+Mar 15 11:49:04 debian kernel: [   11.700458] snd_hda_codec_idt hdaudioC0D0:    dig-in=0x11
+Mar 15 11:49:04 debian kernel: [   11.739147] AVX version of gcm_enc/dec engaged.
+Mar 15 11:49:04 debian kernel: [   11.739400] AES CTR mode by8 optimization enabled
+Mar 15 11:49:04 debian kernel: [   11.750680] input: HDA Intel Mic as /devices/pci0000:00/0000:00:05.0/sound/card0/input9
+Mar 15 11:49:04 debian kernel: [   11.750728] input: HDA Intel Line as /devices/pci0000:00/0000:00:05.0/sound/card0/input10
+Mar 15 11:49:04 debian kernel: [   11.750770] input: HDA Intel Speaker Front as /devices/pci0000:00/0000:00:05.0/sound/card0/input11
+Mar 15 11:49:04 debian kernel: [   11.750811] input: HDA Intel Speaker CLFE as /devices/pci0000:00/0000:00:05.0/sound/card0/input12
+Mar 15 11:49:04 debian kernel: [   11.750851] input: HDA Intel Front Headphone as /devices/pci0000:00/0000:00:05.0/sound/card0/input13
+Mar 15 11:49:04 debian kernel: [   11.750949] input: HDA Intel SPDIF In as /devices/pci0000:00/0000:00:05.0/sound/card0/input14
+Mar 15 11:49:04 debian kernel: [   12.214712] vmwgfx 0000:00:02.0: vgaarb: deactivate vga console
+Mar 15 11:49:04 debian kernel: [   12.215308] Console: switching to colour dummy device 80x25
+Mar 15 11:49:04 debian kernel: [   12.228854] [drm] FIFO at 0x00000000f0000000 size is 2048 kiB
+Mar 15 11:49:04 debian kernel: [   12.228920] [drm] VRAM at 0x00000000e0000000 size is 65536 kiB
+Mar 15 11:49:04 debian kernel: [   12.228933] [drm] DMA map mode: Caching DMA mappings.
+Mar 15 11:49:04 debian kernel: [   12.229000] [drm] Capabilities:
+Mar 15 11:49:04 debian kernel: [   12.229001] [drm]   Cursor.
+Mar 15 11:49:04 debian kernel: [   12.229001] [drm]   Cursor bypass 2.
+Mar 15 11:49:04 debian kernel: [   12.229002] [drm]   Alpha cursor.
+Mar 15 11:49:04 debian kernel: [   12.229002] [drm]   3D.
+Mar 15 11:49:04 debian kernel: [   12.229003] [drm]   Extended Fifo.
+Mar 15 11:49:04 debian kernel: [   12.229003] [drm]   Pitchlock.
+Mar 15 11:49:04 debian kernel: [   12.229004] [drm]   Irq mask.
+Mar 15 11:49:04 debian kernel: [   12.229004] [drm]   GMR.
+Mar 15 11:49:04 debian kernel: [   12.229004] [drm]   Traces.
+Mar 15 11:49:04 debian kernel: [   12.229005] [drm]   GMR2.
+Mar 15 11:49:04 debian kernel: [   12.229005] [drm]   Screen Object 2.
+Mar 15 11:49:04 debian kernel: [   12.229006] [drm] Max GMR ids is 8192
+Mar 15 11:49:04 debian kernel: [   12.229007] [drm] Max number of GMR pages is 1048576
+Mar 15 11:49:04 debian kernel: [   12.229008] [drm] Max dedicated hypervisor surface memory is 475136 kiB
+Mar 15 11:49:04 debian kernel: [   12.229009] [drm] Maximum display memory size is 49152 kiB
+Mar 15 11:49:04 debian kernel: [   12.246005] [TTM] Zone  kernel: Available graphics memory: 2016312 KiB
+Mar 15 11:49:04 debian kernel: [   12.299403] [drm] Screen Objects Display Unit initialized
+Mar 15 11:49:04 debian kernel: [   12.299475] [drm] width 720
+Mar 15 11:49:04 debian kernel: [   12.299500] [drm] height 400
+Mar 15 11:49:04 debian kernel: [   12.299523] [drm] bpp 32
+Mar 15 11:49:04 debian kernel: [   12.299754] [drm] Fifo max 0x00200000 min 0x00001000 cap 0x00000355
+Mar 15 11:49:04 debian kernel: [   12.299767] [drm] Atomic: yes.
+Mar 15 11:49:04 debian kernel: [   12.299772] [drm:vmw_host_log [vmwgfx]] *ERROR* Failed to send host log message.
+Mar 15 11:49:04 debian kernel: [   12.299803] [drm:vmw_host_log [vmwgfx]] *ERROR* Failed to send host log message.
+Mar 15 11:49:04 debian kernel: [   12.314626] fbcon: svgadrmfb (fb0) is primary device
+Mar 15 11:49:04 debian kernel: [   12.315135] Console: switching to colour frame buffer device 100x37
+Mar 15 11:49:04 debian kernel: [   12.325614] [drm] Initialized vmwgfx 2.18.0 20200114 for 0000:00:02.0 on minor 0
+Mar 15 11:49:04 debian kernel: [   12.437852] e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+Mar 15 11:49:04 debian kernel: [   12.438157] IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+Mar 15 11:49:04 debian kernel: [   12.494197] Adding 996348k swap on /dev/sda5.  Priority:-2 extents:1 across:996348k FS
