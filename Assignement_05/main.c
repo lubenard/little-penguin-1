@@ -26,7 +26,6 @@ ssize_t device_read(struct file *file, char *user, size_t size, loff_t *lofft) {
 	static int chars_remaining = 1;
 	int ret;
 
-	//
 	ret = copy_to_user(user, character, 8);
 	if (ret)
 		return (-EFAULT);
