@@ -1,21 +1,29 @@
 #include <linux/module.h>
 #include <linux/kernel.h>
 #include <linux/proc_fs.h>
+#include <linux/mount.h>
+#include <linux/fs.h>
+#include <linux/fs_struct.h>
 
 MODULE_LICENSE("GPL");
 
 struct proc_dir_entry *proc_file_entry;
 
-static ssize_t read_module(struct file *file, char __user *ubuf,size_t count, loff_t *ppos); 
+static ssize_t read_module(struct file *file, char __user *user, size_t count, loff_t *lofft); 
 
 static const struct file_operations proc_file_fops = {
- .read  = read_module,
+	.read  = read_module,
 };
 
-static ssize_t read_module(struct file *file, char __user *ubuf,size_t count, loff_t *ppos) 
+static ssize_t read_module(struct file *file, char __user *user, size_t count, loff_t *lofft) 
 {
-	printk( KERN_DEBUG "read handler\n");
-	return 0;
+	struct dentry *curdentry;
+
+	list_for_each_entry(curdentry, &current->fs->root.mnt->mnt_root->d_subdirs, d_child) {
+		if (curdentry->d_flags & DCACHE_MOUNTED)
+			printk(KERN_INFO "%s is mounted", curdentry->d_name.name);
+	}	
+	return (0);
 }
 
 int init_module(void)
