@@ -1,6 +1,8 @@
 
 The ```MODULE_LICENSE``` is mandatory
 
+Useful documentation:
+
 https://tldp.org/LDP/lkmpg/2.4/html/c577.htm
 
 https://elixir.bootlin.com/linux/latest/source/include/linux/fs.h#L1820
