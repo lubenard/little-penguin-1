@@ -12,6 +12,8 @@ Then cloned the Torvald's git repo:
 wget https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/snapshot/linux-5.12-rc1.tar.gz
 ```
 
+Warning: This version of the kernel does not exist anymore, see [here](https://www.generation-nt.com/linux-rc1-bug-swap-linus-torvalds-actualite-1986065.html) and [here](https://lkml.org/lkml/2021/3/3/1332) why
+
 Extract it:
 
 ```
