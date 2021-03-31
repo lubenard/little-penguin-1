@@ -17,27 +17,8 @@ struct dentry *debugfs_id;
 struct dentry *debugfs_jiffies;
 struct dentry *debugfs_foo;
 
-ssize_t read_id(struct file *file, char *user, size_t size, loff_t *lofft); 
-ssize_t write_id(struct file *file, const char *user, size_t size, loff_t *lofft);
-
-struct file_operations fops_id = {
-	.read = read_id,
-	.write = write_id,
-};
-
-ssize_t read_curr_jiffies(struct file *file, char *user, size_t size, loff_t *lofft); 
-
-struct file_operations fops_jiffies = {
-	.read = read_curr_jiffies,
-};
-
-ssize_t read_foo(struct file *file, char *user, size_t size, loff_t *lofft); 
-ssize_t write_foo(struct file *file, const char *user, size_t size, loff_t *lofft);
-
-struct file_operations fops_foo = {
-	.read = read_foo,
-	.write = write_foo,
-};
+char datas[PAGE_SIZE];
+short foo_status;
 
 ssize_t read_id(struct file *file, char *user, size_t size, loff_t *lofft)
 {
@@ -51,6 +32,11 @@ ssize_t write_id(struct file *file, const char *user, size_t size, loff_t *lofft
 	return (size);
 }
 
+struct file_operations fops_id = {
+	.read = read_id,
+	.write = write_id,
+};
+
 ssize_t read_curr_jiffies(struct file *file, char *user, size_t size, loff_t *lofft)
 {
 	char dst_string[10];
@@ -58,8 +44,10 @@ ssize_t read_curr_jiffies(struct file *file, char *user, size_t size, loff_t *lo
 	return (simple_read_from_buffer(user, 10, lofft, dst_string, 10));
 }
 
-char datas[PAGE_SIZE];
-short foo_status;
+struct file_operations fops_jiffies = {
+	.read = read_curr_jiffies,
+};
+
 
 ssize_t read_foo(struct file *file, char *user, size_t size, loff_t *lofft)
 {
@@ -89,6 +77,11 @@ ssize_t write_foo(struct file *file, const char *user, size_t size, loff_t *loff
 	}
 	return (0);
 }
+
+struct file_operations fops_foo = {
+	.read = read_foo,
+	.write = write_foo,
+};
 
 int init_module(void)
 {
