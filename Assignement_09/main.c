@@ -47,7 +47,7 @@ static ssize_t read_module(struct file *file, char __user *user, size_t len, lof
 {
 	struct dentry *curdentry;
 	char path[1024];
-	char buffer[1024];
+	char *buffer;
 	size_t number_of_entrys = 0;
 	size_t max_length;
 	char *to_print;
@@ -55,7 +55,12 @@ static ssize_t read_module(struct file *file, char __user *user, size_t len, lof
 
 	max_length = get_max_mount_size(&number_of_entrys);
 	to_print = kcalloc(number_of_entrys * max_length, sizeof(*to_print), GFP_KERNEL);
-	if (!to_print)
+	/*
+	 *  Forced to allocate to defined size to avoid stack frame being too big
+	 *   (-Wframe-larger-than)
+	 */
+	buffer = kcalloc(1024, sizeof(*buffer), GFP_KERNEL);
+	if (!to_print || !buffer)
 		return 0;
 	curdentry = current->fs->root.dentry;
 	snprintf(buffer, 1024, "root   %s\n", curdentry->d_name.name);
@@ -69,6 +74,7 @@ static ssize_t read_module(struct file *file, char __user *user, size_t len, lof
 	}
 	ret = simple_read_from_buffer(user, len, lofft, to_print, strlen(to_print));
 	kfree(to_print);
+	kfree(buffer);
 	return ret;
 }
 
