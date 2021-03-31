@@ -70,7 +70,7 @@ ssize_t read_foo(struct file *file, char *user, size_t size, loff_t *lofft)
 		foo_status = FOO_READING;
 		ret = simple_read_from_buffer(user, len, lofft, datas, len);
 		foo_status = FOO_IDLE;
-		return (len);
+		return (ret);
 	}
 	return (0);
 } 
@@ -79,6 +79,8 @@ ssize_t write_foo(struct file *file, const char *user, size_t size, loff_t *loff
 {
 	ssize_t ret;
 
+	if (strlen(user) >= PAGE_SIZE)
+		return (-EINVAL);
 	if (foo_status == FOO_IDLE) {
 		foo_status = FOO_WRITING;
 		ret = simple_write_to_buffer(datas, size, lofft, user, size);
