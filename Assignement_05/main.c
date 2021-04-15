@@ -14,10 +14,16 @@ ssize_t device_read(struct file *file, char *user, size_t size, loff_t *lofft)
 
 ssize_t device_write(struct file *file, const char *user, size_t size, loff_t *lofft)
 {
-	printk(KERN_INFO "Try to write to the kernel space string: '%s'", user);
-	if (strncmp(user, "lubenard", size) != 0)
-		return (-EINVAL);
-	printk(KERN_INFO "The user input is good, copying it into kernel");
+	char user_string[50];
+
+	if (size > 50)
+		return -EINVAL;
+	if (copy_from_user(user_string, user, size) == 0) {
+		printk(KERN_INFO "Try to write to the kernel space string: '%s'", user_string);
+		if (strncmp(user_string, "lubenard", size) != 0)
+			return -EINVAL;
+		printk(KERN_INFO "The user input is good, copying it into kernel");
+	}
 	return size;
 }
 
@@ -36,7 +42,7 @@ int init_module(void)
 {
 	int retval;
 
-	printk(KERN_INFO "Module misc char device driver loaded\n");
+	printk(KERN_INFO "Module misc char device driver loaded");
 	retval = misc_register(&my_misc_driver);
 	if (retval) {
 		printk(KERN_INFO "Error while registering misc char device");
@@ -48,6 +54,6 @@ int init_module(void)
 void cleanup_module(void)
 {
 	misc_deregister(&my_misc_driver);
-	printk(KERN_INFO "Module misc char device driver cleaned up.\n");
+	printk(KERN_INFO "Module misc char device driver cleaned up.");
 }
 

@@ -27,8 +27,16 @@ ssize_t read_id(struct file *file, char *user, size_t size, loff_t *lofft)
 
 ssize_t write_id(struct file *file, const char *user, size_t size, loff_t *lofft)
 {
-	if (strncmp(user, "lubenard", size) != 0)
+	char user_string[50];
+
+	if (size > 50)
 		return -EINVAL;
+	if (copy_from_user(user_string, user, size) == 0) {
+		printk(KERN_INFO "Try to write to the kernel space string: '%s'", user_string);
+		if (strncmp(user_string, "lubenard", size) != 0)
+			return -EINVAL;
+		printk(KERN_INFO "The user input is good, copying it into kernel");
+	}
 	return size;
 }
 
@@ -67,13 +75,15 @@ ssize_t write_foo(struct file *file, const char *user, size_t size, loff_t *loff
 {
 	ssize_t ret;
 
-	if (strlen(user) >= PAGE_SIZE)
+	if (size > PAGE_SIZE)
 		return -EINVAL;
 	if (foo_status == FOO_IDLE) {
 		foo_status = FOO_WRITING;
-		ret = simple_write_to_buffer(datas, size, lofft, user, size);
+		ret = copy_from_user(datas, user, size);
+		if (ret != 0)
+			return -EINVAL;
 		foo_status = FOO_IDLE;
-		return ret;
+		return size;
 	}
 	return 0;
 }

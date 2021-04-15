@@ -72,8 +72,8 @@ static ssize_t read_module(struct file *file, char __user *user, size_t len, lof
 	return ret;
 }
 
-const static struct file_operations proc_file_fops = {
-	.read  = read_module,
+const struct proc_ops proc_file_fops = {
+	.proc_read  = read_module,
 };
 
 int init_module(void)
