@@ -12,6 +12,8 @@ MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Louis Solofrizzo <louis@ne02ptzero.me>");
 MODULE_DESCRIPTION("Useless module");
 
+char str[PAGE_SIZE];
+
 ssize_t myfd_read(struct file *fp, char __user *user, size_t size, loff_t *offs)
 {
 	size_t		t;
@@ -49,8 +51,6 @@ static struct miscdevice myfd_device = {
 	.name = "reverse",
 	.fops = &myfd_fops,
 };
-
-char str[PAGE_SIZE];
 
 static int __init myfd_init(void)
 {

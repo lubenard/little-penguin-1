@@ -4,26 +4,26 @@
 #include <linux/delay.h>
 #include <linux/slab.h>
 
-int		do_work(int *my_int, int retval)
+MODULE_LICENSE("GPL");
+
+int		do_work(int my_int)
 {
 	int x;
-	int y = *my_int;
+	int y = my_int;
 
 	for (x = 0; x < my_int; ++x)
-		usleep_range(10);
+		usleep_range(9, 10);
 	if (y < 10)
 		/*
 		 * That was a long sleep, tell userspace about it
 		 */
-		pr_info("We slept a long time!")
+		pr_info("We slept a long time!");
 	return x * y;
 }
 
 int		my_init(void)
 {
-	int x = 10;
-
-	return do_work(&x, x);
+	return do_work(10);
 }
 
 void	my_exit(void)
